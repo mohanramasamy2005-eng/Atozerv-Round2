@@ -1,0 +1,549 @@
+:root {
+  --ink: #171716;
+  --muted: #77736c;
+  --line: #c9c5bc;
+  --paper: #f5f3ee;
+  --red: #bd3d2f;
+  --blue: #1769d1;
+  --serif: "Noto Sans Tamil", sans-serif;
+}
+.app-shell {
+  max-width: 1240px;
+  margin: auto;
+  background: var(--paper);
+  min-height: 100vh;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.site-header {
+  padding: 0 34px;
+}
+.masthead {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 0 18px;
+}
+.masthead-actions {
+  align-items: center;
+  display: flex;
+  gap: 22px;
+}
+.whatsapp-channel {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #25d366;
+  border-radius: 7px;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.16);
+  color: #075e54;
+  display: flex;
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  gap: 8px;
+  padding: 7px 12px 7px 8px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.whatsapp-channel:hover {
+  background: #f0fff5;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.25);
+}
+.whatsapp-icon {
+  align-items: center;
+  background: #25d366;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 27px;
+  justify-content: center;
+  width: 27px;
+}
+.whatsapp-logo {
+  fill: #ffffff;
+  height: 18px;
+  width: 18px;
+}
+.brand,
+.footer-brand {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  text-decoration: none;
+}
+.brand-group {
+  display: flex;
+  flex-direction: column;
+}
+.brand-description {
+  color: var(--muted);
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 3px 0 0;
+}
+.brand i,
+.footer-brand i {
+  color: var(--red);
+  font-style: normal;
+}
+.brand i {
+  color: var(--blue);
+}
+.main-nav {
+  background: #ffffff;
+  border-bottom: 3px double var(--ink);
+  border-top: 1px solid var(--ink);
+  display: flex;
+  gap: 0;
+}
+.main-nav a {
+  color: var(--ink);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  padding: 13px 24px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+.nav-emoji {
+  font-size: 16px;
+  margin-right: 7px;
+  vertical-align: -1px;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--blue);
+}
+.main-nav a.active::after {
+  background: var(--blue);
+  bottom: -3px;
+  content: "";
+  height: 3px;
+  left: 18px;
+  position: absolute;
+  right: 18px;
+}
+.menu-button {
+  background: transparent;
+  border: 0;
+  display: none;
+  font-size: 25px;
+}
+main {
+  padding: 0 34px 76px;
+}
+.breaking {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 18px;
+  overflow: hidden;
+  padding: 13px 0;
+  white-space: nowrap;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.breaking strong {
+  background: var(--red);
+  color: white;
+  padding: 4px 9px;
+  font-size: 10px;
+}
+.breaking span:nth-child(3) {
+  color: var(--red);
+}
+.intro {
+  border-bottom: 1px solid var(--ink);
+  padding: 70px 0 40px;
+}
+.section-kicker,
+.eyebrow,
+.footer-label {
+  color: var(--red);
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.intro h1,
+.category-heading h1,
+.article-page > h1 {
+  font-family: var(--serif);
+  font-size: clamp(42px, 6vw, 78px);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 1.07;
+  margin: 17px 0 15px;
+  max-width: 760px;
+}
+.intro h1 em {
+  color: var(--red);
+  font-weight: 400;
+}
+.intro-copy {
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 515px;
+}
+.lead-grid {
+  border-bottom: 1px solid var(--ink);
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  gap: 26px;
+  padding: 28px 0 38px;
+}
+.news-card {
+  min-width: 0;
+  text-align: left;
+}
+.image-button,
+.article-image {
+  background: none;
+  border: 0;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+.image-button img,
+.article-image img {
+  aspect-ratio: 16 / 10;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+.image-button:hover img,
+.article-image:hover img {
+  transform: scale(1.04);
+}
+.news-card--feature h2 {
+  font-size: clamp(25px, 3vw, 38px);
+}
+.card-copy {
+  padding-top: 15px;
+  text-align: left;
+}
+.card-copy h2 {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+  margin: 9px 0;
+}
+.card-copy h2 a {
+  text-decoration: none;
+}
+.card-copy h2 a:hover {
+  color: var(--red);
+}
+.card-copy p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0 0 15px;
+}
+.byline {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.side-stories {
+  border-left: 1px solid var(--line);
+  display: grid;
+  gap: 26px;
+  padding-left: 26px;
+}
+.side-stories .news-card + .news-card {
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+}
+.latest-heading {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0 19px;
+}
+.latest-heading h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+.latest-heading h2 a {
+  color: var(--red);
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  margin-left: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 22px;
+}
+.category-heading {
+  border-bottom: 1px solid var(--ink);
+  padding: 60px 0 25px;
+}
+.category-heading h1 {
+  font-size: clamp(44px, 7vw, 88px);
+  margin-bottom: 10px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 22px;
+  padding-top: 28px;
+  text-align: left;
+}
+.category-grid .news-card:first-child {
+  grid-column: span 2;
+}
+.category-grid .news-card:first-child h2 {
+  font-size: 32px;
+}
+.status {
+  color: var(--muted);
+  font-family: var(--serif);
+  padding: 80px 0;
+  text-align: center;
+}
+.retry-button {
+  background: var(--ink);
+  border: 0;
+  color: var(--paper);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin-top: 18px;
+  padding: 11px 16px;
+  text-transform: uppercase;
+}
+.article-page {
+  max-width: 900px;
+  text-align: left;
+}
+.back-link {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin: 38px 0 48px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.article-page > h1 {
+  max-width: 860px;
+}
+.article-deck {
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.55;
+  max-width: 700px;
+}
+.article-meta {
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 24px 0;
+  text-transform: uppercase;
+}
+.article-image {
+  margin: 32px 0;
+}
+.article-image img {
+  aspect-ratio: 16 / 8;
+}
+.article-content {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.9;
+  margin: 0;
+  max-width: 680px;
+  text-align: left;
+}
+.related-title {
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 65px;
+  padding-bottom: 13px;
+  text-align: left;
+}
+.lightbox {
+  align-items: center;
+  background: rgba(15, 15, 14, 0.94);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 20;
+  animation: appear 0.2s ease;
+}
+.lightbox figure {
+  margin: 20px;
+  max-width: min(1000px, 90vw);
+}
+.lightbox img {
+  display: block;
+  max-height: 80vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+.lightbox figcaption {
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 14px;
+  padding-top: 13px;
+}
+.lightbox-close {
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 38px;
+  position: absolute;
+  right: 28px;
+  top: 15px;
+}
+footer {
+  border-top: 3px double var(--ink);
+  display: grid;
+  gap: 45px;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  margin: 0 34px;
+  padding: 33px 0 45px;
+}
+.footer-brand p {
+  color: var(--muted);
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: 12px;
+}
+footer > div:not(:first-child) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-label {
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+footer a {
+  font-size: 12px;
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--red);
+}
+footer small {
+  color: var(--muted);
+  font-size: 10px;
+  grid-column: 1 / -1;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body,
+body * {
+  font-weight: 700;
+}
+@media (max-width: 720px) {
+  .site-header,
+  main {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .utility .edition {
+    display: none;
+  }
+  .masthead {
+    padding: 18px 0;
+  }
+  .brand {
+    font-size: 23px;
+  }
+  .brand-description {
+    font-size: 8px;
+    max-width: 230px;
+  }
+  .masthead-actions {
+    gap: 10px;
+  }
+  .whatsapp-channel {
+    font-size: 9px;
+    gap: 4px;
+    padding: 6px 8px 6px 6px;
+  }
+  .whatsapp-icon {
+    height: 24px;
+    width: 24px;
+  }
+  .whatsapp-logo {
+    height: 16px;
+    width: 16px;
+  }
+  .menu-button {
+    display: block;
+  }
+  .main-nav {
+    display: none;
+    flex-direction: column;
+  }
+  .main-nav.is-open {
+    display: flex;
+  }
+  .main-nav a {
+    padding: 14px 4px;
+  }
+  .intro {
+    padding-top: 46px;
+  }
+  .lead-grid,
+  .news-grid,
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+  .side-stories {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 26px 0 0;
+  }
+  .category-grid .news-card:first-child {
+    grid-column: auto;
+  }
+  .category-grid .news-card:first-child h2 {
+    font-size: 26px;
+  }
+  .latest-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    margin: 0 18px;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
